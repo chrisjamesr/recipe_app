@@ -1,0 +1,17 @@
+To Do
+
+[x] Fix RecipeIngredient on update
+[ ] Figure out what to do about adding new ingredients on edit
+[x] Add in form errors to login, sign up
+[x] Fix User validations
+[ ] Add form to filter for newest/oldest
+[ ] Add scope method to filter by time
+[ ] Add scope method to filter by number of ingredients
+
+
+!  try to combine filter options 
+
+[x]Add Styling !!!!
+
+[ ]Add real recipes. 
+

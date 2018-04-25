@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
   root 'welcome#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -12,7 +14,9 @@ Rails.application.routes.draw do
   resources :users do
     resources :recipes 
   end
-  resources :ingredients, :categories, :recipes, :only => [:index] 
+  resources :ingredients, :recipes, :only => [:index] 
+
+  get '/categories' => 'categories#index'
 
 
   delete '/recipes/:id/recipe_ingredients/:id', :to => 'recipe_ingredients#destroy', :as => :remove_ingredient

@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def has_permission?
     user = User.find_by(:id => params[:user_id])
     recipe = Recipe.find_by(:id => params[:id])
-    unless current_user == user && current_user.recipes.include?(recipe)
+    if current_user != user && !current_user.recipes.include?(recipe)
       flash[:notice] = "You are not authorized to edit this record!"
       redirect_to user_recipe_path(user, recipe)
     end
